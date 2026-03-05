@@ -654,7 +654,7 @@
     </p>
     <div class="hero-buttons">
       <a href="tel:8163268122" class="btn-gradient">Call Us</a>
-      <a href="#products" class="btn-outline">See Products</a>
+      <a href="#curbside" class="btn-outline">🚗 Curbside Pickup</a>
     </div>
   </div>
   <div class="hero-badge">
@@ -690,6 +690,8 @@
     <span class="ticker-item muted">·</span>
     <span class="ticker-item yellow">Special Orders</span>
     <span class="ticker-item muted">·</span>
+    <span class="ticker-item cyan">🚗 Curbside Pickup Available</span>
+    <span class="ticker-item muted">·</span>
     <!-- repeat -->
     <span class="ticker-item pink">Glass Pipes</span>
     <span class="ticker-item muted">·</span>
@@ -714,6 +716,8 @@
     <span class="ticker-item cyan">Terpine Spray</span>
     <span class="ticker-item muted">·</span>
     <span class="ticker-item yellow">Special Orders</span>
+    <span class="ticker-item muted">·</span>
+    <span class="ticker-item cyan">🚗 Curbside Pickup Available</span>
     <span class="ticker-item muted">·</span>
   </div>
 </div>
@@ -890,6 +894,103 @@
   </div>
 </section>
 
+<!-- CURBSIDE PICKUP -->
+<section id="curbside">
+  <div class="curbside-inner">
+    <div class="reveal">
+      <p class="tag" style="color:var(--cyan)">// New Feature</p>
+      <h2 class="big-title">Curbside<br/><span class="grad">Pickup.</span></h2>
+      <div class="rule" style="background:linear-gradient(90deg,var(--cyan),var(--purple))"></div>
+      <div class="curbside-badge-row">
+        <span class="cs-badge cs-badge-car">Drive-Up Ready</span>
+        <span class="cs-badge cs-badge-fast">Fast & Easy</span>
+        <span class="cs-badge cs-badge-free">No Wait Inside</span>
+      </div>
+      <p class="body-text" style="margin-bottom:36px">Don't want to leave the car? No problem. Tell us what you need, pull up out front, and we'll bring it right out to you. It's that simple.</p>
+      <div class="curbside-steps">
+        <div class="cs-step active">
+          <div class="cs-step-num">01</div>
+          <div>
+            <div class="cs-step-title">Tell Us What You Need</div>
+            <p class="cs-step-desc">Fill out the quick form — what you're looking for, your name, and a number we can text or call.</p>
+          </div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-num">02</div>
+          <div>
+            <div class="cs-step-title">Pull Up Out Front</div>
+            <p class="cs-step-desc">Head to 904 W 39th St and park right out front. Drop your spot number in the form so we find you fast.</p>
+          </div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-num">03</div>
+          <div>
+            <div class="cs-step-title">We Bring It Out</div>
+            <p class="cs-step-desc">A crew member will run your order right to your window — no hassle, no parking struggle, no waiting inside.</p>
+          </div>
+        </div>
+        <div class="cs-step">
+          <div class="cs-step-num">04</div>
+          <div>
+            <div class="cs-step-title">Pay & Roll Out</div>
+            <p class="cs-step-desc">Cash or card accepted at the car. We verify age curbside — you must be 21+ for all purchases.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="reveal" style="transition-delay:0.2s">
+      <div class="curbside-form-panel">
+        <div class="cf-header">
+          <div class="cf-title">Request <span class="grad">Curbside</span></div>
+          <p class="cf-sub">Fill this out and we'll have your order ready when you pull up. For questions, call us at <strong style="color:var(--text)">(816) 326-8122</strong>.</p>
+        </div>
+        <div class="cf-form-body">
+          <div class="cf-row">
+            <div class="cf-field">
+              <label class="cf-label">Your Name</label>
+              <input class="cf-input" type="text" placeholder="e.g. Jordan" id="cfName" />
+            </div>
+            <div class="cf-field">
+              <label class="cf-label">Phone / Text</label>
+              <input class="cf-input" type="tel" placeholder="(816) 555-0100" id="cfPhone" />
+            </div>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">What Are You Looking For?</label>
+            <textarea class="cf-textarea" placeholder="e.g. a mid-range bong, pack of Backwoods, Delta 8 gummies…" id="cfOrder"></textarea>
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Your Vehicle</label>
+            <input class="cf-input" type="text" placeholder="e.g. Black Jeep, Red Civic, Silver SUV…" id="cfVehicle" />
+          </div>
+          <div class="cf-field">
+            <label class="cf-label">Estimated Arrival</label>
+            <select class="cf-select" id="cfEta">
+              <option value="">Select a window…</option>
+              <option>I'm here now</option>
+              <option>5–10 minutes</option>
+              <option>10–20 minutes</option>
+              <option>20–30 minutes</option>
+            </select>
+          </div>
+          <div class="cf-field" style="background:rgba(255,60,172,0.05); border:1px solid rgba(255,60,172,0.15); padding:14px 16px; display:flex; gap:12px; align-items:center;">
+            <span style="font-size:1.2rem">🪪</span>
+            <span style="font-size:0.78rem; color:var(--muted); line-height:1.6"><strong style="color:var(--text)">21+ required.</strong> Have a valid ID ready — we verify age at the vehicle before every curbside order.</span>
+          </div>
+          <button class="cf-submit" onclick="submitCurbside()">Request Curbside Pickup →</button>
+        </div>
+        <div class="cf-confirmation" id="cfConfirmation">
+          <span class="cf-conf-icon">🚗</span>
+          <div class="cf-conf-title">We're <span class="grad">On It!</span></div>
+          <p class="cf-conf-sub">Your request is in. Pull up out front at <strong style="color:var(--text)">904 W 39th St</strong> and we'll bring your order right to your window. Have your ID ready!</p>
+          <span class="cf-conf-eta" id="cfConfEta">ETA: —</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- CTA -->
 <section id="cta">
   <div class="cta-inner reveal">
@@ -898,6 +999,7 @@
     <p class="cta-body">Stop by 904 W 39th Street — right in the heart of Kansas City. Whatever you need, we've got it. And if we don't, we'll get it for you.</p>
     <div class="cta-buttons">
       <a href="tel:8163268122" class="btn-gradient">📞 (816) 326-8122</a>
+      <a href="#curbside" class="btn-outline">🚗 Curbside Pickup</a>
       <a href="https://www.google.com/maps?q=Candy+Smoke+Shop+Kansas+City" target="_blank" class="btn-outline">Get Directions</a>
     </div>
   </div>
@@ -945,6 +1047,26 @@
       bottom:-${size}px;
     `;
     bg.appendChild(s);
+  }
+
+  // Curbside form
+  function submitCurbside() {
+    const name = document.getElementById('cfName').value.trim();
+    const phone = document.getElementById('cfPhone').value.trim();
+    const order = document.getElementById('cfOrder').value.trim();
+    const eta = document.getElementById('cfEta').value;
+    if (!name || !phone || !order || !eta) {
+      const fields = document.querySelectorAll('.cf-input, .cf-textarea, .cf-select');
+      fields.forEach(f => {
+        if (!f.value.trim()) { f.style.borderColor = 'var(--pink)'; }
+        else { f.style.borderColor = ''; }
+      });
+      return;
+    }
+    document.querySelector('.cf-form-body').classList.add('hide');
+    const conf = document.getElementById('cfConfirmation');
+    conf.classList.add('show');
+    document.getElementById('cfConfEta').textContent = 'ETA: ' + eta;
   }
 
   // Hours
