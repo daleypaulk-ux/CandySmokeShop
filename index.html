@@ -437,6 +437,138 @@
     .cta-body { font-size: 1rem; color: var(--muted); margin-bottom: 44px; line-height: 1.75; }
     .cta-buttons { display: flex; gap: 14px; justify-content: center; }
 
+    /* ─── CURBSIDE ─── */
+    #curbside {
+      padding: 110px 52px; position: relative; z-index: 1;
+      background: var(--bg);
+    }
+    .curbside-inner {
+      max-width: 1400px; margin: 0 auto;
+      display: grid; grid-template-columns: 1fr 1fr; gap: 100px; align-items: start;
+    }
+    .curbside-badge-row {
+      display: flex; gap: 12px; flex-wrap: wrap; margin-bottom: 36px;
+    }
+    .cs-badge {
+      font-family: 'Syne Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 6px 14px; border-radius: 2px;
+    }
+    .cs-badge-car { background: rgba(0,229,255,0.12); color: var(--cyan); border: 1px solid rgba(0,229,255,0.25); }
+    .cs-badge-fast { background: rgba(255,60,172,0.12); color: var(--pink); border: 1px solid rgba(255,60,172,0.25); }
+    .cs-badge-free { background: rgba(255,225,26,0.12); color: var(--yellow); border: 1px solid rgba(255,225,26,0.25); }
+
+    .curbside-steps {
+      display: flex; flex-direction: column; gap: 0; margin-top: 32px;
+    }
+    .cs-step {
+      display: flex; gap: 24px; align-items: flex-start;
+      padding: 24px 0; border-bottom: 1px solid var(--border);
+    }
+    .cs-step-num {
+      width: 40px; height: 40px; flex-shrink: 0;
+      background: var(--bg2); border: 1px solid var(--border);
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Syne Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.15em; color: var(--muted);
+    }
+    .cs-step.active .cs-step-num {
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      border-color: transparent; color: #fff;
+    }
+    .cs-step-title {
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 0.95rem; margin-bottom: 4px;
+    }
+    .cs-step-desc { font-size: 0.83rem; color: var(--muted); line-height: 1.65; }
+
+    /* Form panel */
+    .curbside-form-panel {
+      background: var(--bg2); border: 1px solid var(--border);
+      padding: 44px 40px; position: relative; overflow: hidden;
+    }
+    .curbside-form-panel::before {
+      content: '🚗';
+      position: absolute; bottom: -16px; right: 16px;
+      font-size: 8rem; opacity: 0.05; pointer-events: none;
+      user-select: none;
+    }
+    .cf-header {
+      margin-bottom: 32px;
+    }
+    .cf-title {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 1.5rem; margin-bottom: 6px; letter-spacing: -0.01em;
+    }
+    .cf-sub { font-size: 0.83rem; color: var(--muted); line-height: 1.6; }
+
+    .cf-field { margin-bottom: 20px; }
+    .cf-label {
+      display: block;
+      font-family: 'Syne Mono', monospace; font-size: 0.58rem;
+      letter-spacing: 0.25em; text-transform: uppercase;
+      color: var(--muted); margin-bottom: 8px;
+    }
+    .cf-input, .cf-textarea, .cf-select {
+      width: 100%; background: var(--bg3);
+      border: 1px solid var(--border); color: var(--text);
+      font-family: 'Inter', sans-serif; font-size: 0.9rem;
+      padding: 13px 16px; outline: none;
+      transition: border-color 0.2s;
+      appearance: none; -webkit-appearance: none;
+    }
+    .cf-input:focus, .cf-textarea:focus, .cf-select:focus {
+      border-color: var(--purple);
+    }
+    .cf-textarea { resize: vertical; min-height: 90px; }
+    .cf-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+
+    .cf-spot-row {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .cf-spot-icon {
+      width: 46px; height: 46px; flex-shrink: 0;
+      background: linear-gradient(135deg, var(--cyan), var(--purple));
+      display: flex; align-items: center; justify-content: center;
+      font-size: 1.2rem;
+    }
+
+    .cf-submit {
+      width: 100%; margin-top: 8px;
+      font-family: 'Syne', sans-serif; font-weight: 700;
+      font-size: 0.82rem; letter-spacing: 0.1em; text-transform: uppercase;
+      padding: 16px; border: none; cursor: pointer;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      color: #fff; transition: opacity 0.2s, transform 0.2s;
+    }
+    .cf-submit:hover { opacity: 0.87; transform: translateY(-2px); }
+
+    .cf-confirmation {
+      display: none; text-align: center; padding: 40px 20px;
+    }
+    .cf-confirmation.show { display: block; }
+    .cf-form-body.hide { display: none; }
+    .cf-conf-icon { font-size: 3rem; margin-bottom: 16px; display: block; }
+    .cf-conf-title {
+      font-family: 'Syne', sans-serif; font-weight: 800;
+      font-size: 1.4rem; margin-bottom: 10px;
+    }
+    .cf-conf-sub { font-size: 0.88rem; color: var(--muted); line-height: 1.7; }
+    .cf-conf-eta {
+      margin-top: 20px; display: inline-block;
+      font-family: 'Syne Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.2em; text-transform: uppercase;
+      padding: 8px 18px;
+      border: 1px solid rgba(0,229,255,0.3); color: var(--cyan);
+    }
+
+    @media (max-width: 960px) {
+      .curbside-inner { grid-template-columns: 1fr; gap: 50px; }
+      #curbside { padding: 80px 20px; }
+      .cf-row { grid-template-columns: 1fr; }
+      .curbside-form-panel { padding: 32px 24px; }
+    }
+
     /* ─── FOOTER ─── */
     footer {
       background: #080808; border-top: 1px solid var(--border);
